@@ -673,7 +673,7 @@ $btn-mb: 0.5rem;
   @include pl-pr(0);
 
   position: fixed;
-  top: 0;
+  top: $topbar-height;
   left: 0;
   height: calc(100vh - $topbar-height);
   overflow-y: auto;
