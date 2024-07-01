@@ -675,7 +675,7 @@ $btn-mb: 0.5rem;
   position: fixed;
   top: 0;
   left: 0;
-  height: calc(100vw - $topbar-height);
+  height: calc(100vh - $topbar-height);
   overflow-y: auto;
   width: $sidebar-width;
   z-index: 99;
@@ -1273,6 +1273,10 @@ search {
   [#{$sidebar-display}] {
     #sidebar {
       transform: translateX(0);
+    }
+
+    #main-wrapper {
+      transform: translateX($sidebar-width);
     }
 
     #back-to-top {
