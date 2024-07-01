@@ -17,8 +17,6 @@ layout: compress
   {% include head.html %}
 
   <body>
-    {% include sidebar.html lang=lang %}
-
     <div id="main-wrapper" class="d-flex justify-content-center">
       <div class="container d-flex flex-column px-xxl-5">
         {% include topbar.html lang=lang %}
@@ -60,6 +58,8 @@ layout: compress
 
         {% include_cached search-results.html lang=lang %}
       </div>
+
+      {% include sidebar.html lang=lang %}
 
       <aside aria-label="Scroll to Top">
         <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
