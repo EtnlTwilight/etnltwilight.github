@@ -71,3 +71,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Deploy to CloudFlare Pages
+        uses: cloudflare/wrangler-action@v3.1.0
+        with:
+          # Your Cloudflare API Token
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          # Your Cloudflare Account ID
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
