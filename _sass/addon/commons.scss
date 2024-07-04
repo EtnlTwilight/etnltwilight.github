@@ -37,7 +37,7 @@ body {
   font-family: $font-family-base;
 }
 
-*{
+.active-transition *{
   transition: 
     background-color .3s ease-in-out,
     border .3s ease-in-out,
