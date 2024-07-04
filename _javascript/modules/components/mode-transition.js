@@ -3,28 +3,28 @@
  * to avoid a strange visual when switching page.
  */
 
-var isPageLoaded = false;
-var isTransitionLoaded = false;
-
 export function initTransition() {
+    window.isPageLoaded = false;
+    window.isTransitionLoaded = false;
+
     document.addEventListener("DOMContentLoaded", function () {
-        isPageLoaded = true;
-        isPageUnLoaded = false;
+        window.isPageLoaded = true;
+        window.isPageUnLoaded = false;
     });
 
     window.addEventListener("message", function (event) {
         if (event.data.direction === ModeToggle.ID) {
-            if (!isPageLoaded) {
+            if (!window.isPageLoaded) {
                 loadTransition();
-                isTransitionLoaded = true;
+                window.isTransitionLoaded = true;
             }
         }
     });
 
     window.addEventListener("unload", function(){
-        if(isTransitionLoaded){
+        if(window.isTransitionLoaded){
             removeTransition();
-            isTransitionLoaded = false;
+            window.isTransitionLoaded = false;
         }
     });
 }
