@@ -9,7 +9,7 @@ export function initTransition() {
 
     document.addEventListener("DOMContentLoaded", function () {
         window.isPageLoaded = true;
-        window.isPageUnLoaded = false;
+        window.isTransitionLoaded = false;
     });
 
     window.addEventListener("message", function (event) {
@@ -17,6 +17,7 @@ export function initTransition() {
             if (window.isPageLoaded) {
                 loadTransition();
                 window.isTransitionLoaded = true;
+                console.log(event.data.direction);
             }
         }
     });
