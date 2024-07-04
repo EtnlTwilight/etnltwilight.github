@@ -8,25 +8,11 @@ export function initTransition() {
     window.isTransitionLoaded = false;
 
     document.addEventListener("DOMContentLoaded", function () {
-        window.isPageLoaded = true;
-        window.isTransitionLoaded = false;
+        loadTransition();
     });
 
-    window.addEventListener("message", function (event) {
-        if (event.data.direction === ModeToggle.ID) {
-            if (window.isPageLoaded) {
-                loadTransition();
-                window.isTransitionLoaded = true;
-                console.log(event.data.direction);
-            }
-        }
-    });
-
-    window.addEventListener("unload", function(){
-        if(window.isTransitionLoaded){
-            removeTransition();
-            window.isTransitionLoaded = false;
-        }
+    window.addEventListener("unload", function () {
+        removeTransition();
     });
 }
 
