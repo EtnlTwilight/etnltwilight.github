@@ -1305,12 +1305,6 @@ search {
     display: none;
   }
 
-  #topbar-wrapper {
-    @include slide(top 0.2s ease);
-
-    left: 0;
-  }
-
   main,
   #panel-wrapper {
     margin-top: 0;
@@ -1461,10 +1455,6 @@ search {
 
 @media all and (min-width: 1650px) {
   $icon-gap: 1rem;
-
-  #topbar-wrapper {
-    left: $sidebar-width-large;
-  }
 
   search {
     margin-right: calc(
