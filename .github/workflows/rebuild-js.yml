@@ -23,5 +23,7 @@ jobs:
           bundler-cache: true
 
       - name: Rebuild
-        run: npm run build:js
+        run: |
+          npm install 
+          npm run build:js
         
