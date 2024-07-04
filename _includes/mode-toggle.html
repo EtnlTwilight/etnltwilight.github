@@ -1,6 +1,9 @@
 <!-- Switch the mode between dark and light. -->
 
 <script type="text/javascript">
+  import { loadTransition } from '../components/load-transition';
+  import { removeTransition } from '../components/load-transition';
+
   class ModeToggle {
     static get MODE_KEY() {
       return 'mode';
@@ -98,6 +101,7 @@
     }
 
     flipMode() {
+      removeTransition();
       if (this.hasMode) {
         this.clearMode();
       } else {
@@ -107,7 +111,7 @@
           this.setDark();
         }
       }
-
+      loadTransition();
       this.notify();
     }
   }
