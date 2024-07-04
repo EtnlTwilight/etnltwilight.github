@@ -772,6 +772,9 @@ $btn-mb: 0.5rem;
       width: 100%;
       padding-left: 1.5rem;
       padding-right: 1.5rem;
+      transition: 
+        background-color .3s ease-in-out,
+        color .1s ease-in-out;
 
       a.nav-link {
         @include pt-pb(0.6rem);
@@ -803,9 +806,7 @@ $btn-mb: 0.5rem;
           background-color: var(--sidebar-hover-bg);
           transition: 
             background-color .3s ease-in-out,
-            border .3s ease-in-out,
-            box-shadow .3s ease-in-out,
-            color .15s ease-in-out;
+            color .1s ease-in-out;
 
           span {
             opacity: 1;
