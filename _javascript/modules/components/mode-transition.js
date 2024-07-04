@@ -10,7 +10,7 @@ export function initTransition() {
     document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function() {
             loadTransition();
-        }, 200);
+        }, 800);
     });
 
     window.addEventListener("unload", function () {
