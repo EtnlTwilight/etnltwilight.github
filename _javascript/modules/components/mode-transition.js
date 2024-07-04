@@ -3,7 +3,33 @@
  * to avoid a strange visual when switching page.
  */
 
-export function loadTransition() {
+var isPageLoaded = false;
+var isTransitionLoaded = false;
+
+export function initTransition() {
+    document.addEventListener("DOMContentLoaded", function () {
+        isPageLoaded = true;
+        isPageUnLoaded = false;
+    });
+
+    window.addEventListener("message", function (event) {
+        if (event.data.direction === ModeToggle.ID) {
+            if (!isPageLoaded) {
+                loadTransition();
+                isTransitionLoaded = true;
+            }
+        }
+    });
+
+    window.addEventListener("unload", function(){
+        if(isTransitionLoaded){
+            removeTransition();
+            isTransitionLoaded = false;
+        }
+    });
+}
+
+function loadTransition() {
     var newStyle = document.createElement('style');
     var cssRules = `
             * {
@@ -20,7 +46,7 @@ export function loadTransition() {
     document.head.appendChild(newStyle);
 }
 
-export function removeTransition() {
+function removeTransition() {
     var style = document.getElementById("color-mode-transition")
     if (!(style == null)) {
         document.head.removeChild(style);
