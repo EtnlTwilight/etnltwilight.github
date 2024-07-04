@@ -780,6 +780,9 @@ $btn-mb: 0.5rem;
         align-items: center;
         border-radius: 0.75rem;
         font-weight: 600;
+        transition: 
+          background-color .3s ease-in-out,
+          color .1s ease-in-out;
 
         &:hover {
           background-color: var(--sidebar-hover-bg);
