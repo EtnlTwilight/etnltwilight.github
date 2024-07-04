@@ -1,6 +1,6 @@
 name: "Rebuild the JS"
 on:
-  push
+  workflow_dispatch:
 
 jobs:
   build:
