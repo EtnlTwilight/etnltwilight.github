@@ -27,3 +27,9 @@ jobs:
           npm install 
           npm run build:js
         
+      - name: Upload Files
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: |
+            **/*  # 使用glob模式匹配所有文件和目录
+            !.git/  # 排除.git目录
