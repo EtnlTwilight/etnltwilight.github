@@ -18,7 +18,7 @@ package-lock.json
 # IDE configurations
 .idea
 .vscode
-b.html
+A.html
 !.vscode/settings.json
 !.vscode/extensions.json
 
