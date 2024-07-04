@@ -27,6 +27,8 @@ html {
 }
 
 body {
+  display: grid;
+  grid-template-rows: $topbar-height auto;
   background: var(--main-bg);
   padding: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left);
@@ -894,6 +896,7 @@ $btn-mb: 0.5rem;
 /* --- top-bar --- */
 
 #topbar-wrapper {
+  grid-row: 1;
   height: $topbar-height;
   background-color: var(--topbar-bg);
 }
@@ -1101,8 +1104,9 @@ search {
 /* --- basic wrappers --- */
 
 #main-wrapper {
+  grid-row: 2;
   position: relative;
-  max-height: 100%;
+  height: calc(100vh - $topbar-height);
 
   @include pl-pr(0);
 
