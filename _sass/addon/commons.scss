@@ -674,7 +674,7 @@ $btn-mb: 0.5rem;
 
   top: 0;
   left: 0;
-  height: 100%;
+  height: calc(100vh - $topbar-height);
   overflow-y: auto;
   width: $sidebar-width;
   z-index: 99;
@@ -1102,6 +1102,7 @@ search {
 
 #main-wrapper {
   position: relative;
+  max-height: 100%;
 
   @include pl-pr(0);
 
