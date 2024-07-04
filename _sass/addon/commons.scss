@@ -723,6 +723,7 @@ $btn-mb: 0.5rem;
     padding-left: 2.5rem;
     padding-right: 1.25rem;
     width: 100%;
+    background: var(--sidebar-bg);
   }
 
   .site-title {
@@ -1273,10 +1274,6 @@ search {
       transform: translateX(0);
     }
 
-    #main-wrapper {
-      transform: translateX($sidebar-width);
-    }
-
     #back-to-top {
       visibility: hidden;
     }
@@ -1287,10 +1284,6 @@ search {
 
     transform: translateX(-$sidebar-width); /* hide */
     -webkit-transform: translateX(-$sidebar-width);
-  }
-
-  #main-wrapper {
-    @include slide;
   }
 
   #topbar,
@@ -1346,10 +1339,6 @@ search {
   /* Solved jumping scrollbar */
   html {
     overflow-y: scroll;
-  }
-
-  #main-wrapper {
-    margin-left: $sidebar-width;
   }
 
   #sidebar {
@@ -1467,10 +1456,6 @@ search {
 
 @media all and (min-width: 1650px) {
   $icon-gap: 1rem;
-
-  #main-wrapper {
-    margin-left: $sidebar-width-large;
-  }
 
   #topbar-wrapper {
     left: $sidebar-width-large;
