@@ -1,13 +1,6 @@
 name: "Rebuild the JS"
 on:
-  push:
-    branches:
-      - main
-      - master
-    paths-ignore:
-      - .gitignore
-      - README.md
-      - LICENSE
+  create:
 
 jobs:
   build:
@@ -30,5 +23,5 @@ jobs:
           bundler-cache: true
 
       - name: Rebuild
-        run: bundle exec jekyll s -l
+        run: npm run build:js
         
