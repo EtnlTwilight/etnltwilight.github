@@ -18,6 +18,7 @@ export function initTransition() {
                 loadTransition();
                 window.isTransitionLoaded = true;
             }
+            console.log(event.data.direction);
         }
     });
 
