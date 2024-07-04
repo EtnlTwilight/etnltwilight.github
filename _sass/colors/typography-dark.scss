@@ -39,8 +39,8 @@
   --site-subtitle-color: #868686;
   --sidebar-bg: #282828;
   --sidebar-border-color: #292929;
-  --sidebar-muted-color: #868686;
-  --sidebar-active-color: rgb(255, 255, 255, 0.95);
+  --sidebar-muted-color: var(--site-title-color);
+  --sidebar-active-color: var(--sidebar-active-color);
   --sidebar-hover-bg: #262626;
   --sidebar-btn-bg: #232328;
   --sidebar-btn-color: #787878;
