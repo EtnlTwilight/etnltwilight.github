@@ -803,6 +803,10 @@ $btn-mb: 0.5rem;
           span {
             opacity: 1;
           }
+
+          &:hover {
+            background-color: var(--sidebar-nav-active-bg);
+          }
         }
       }
 
