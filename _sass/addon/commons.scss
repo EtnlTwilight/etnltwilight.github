@@ -37,14 +37,6 @@ body {
   font-family: $font-family-base;
 }
 
-.active-transition *{
-  transition: 
-    background-color .3s ease-in-out,
-    border .3s ease-in-out,
-    box-shadow .3s ease-in-out,
-    color .3s ease-in-out;
-}
-
 /* --- Typography --- */
 
 @for $i from 1 through 5 {
