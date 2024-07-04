@@ -1,6 +1,6 @@
 name: "Rebuild the JS"
 on:
-  create:
+  push
 
 jobs:
   build:
