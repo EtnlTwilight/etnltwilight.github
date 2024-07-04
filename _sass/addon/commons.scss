@@ -38,7 +38,10 @@ body {
 }
 
 *{
-  transition: background-color .3s ease-in-out;
+  transition: 
+    background-color .3s ease-in-out,
+    box-shadow .3s ease-in-out,
+    color .3s ease-in-out;
 }
 
 /* --- Typography --- */
