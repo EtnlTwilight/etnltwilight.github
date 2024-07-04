@@ -7,12 +7,13 @@ export function initTransition() {
     window.isPageLoaded = false;
     window.isTransitionLoaded = false;
 
-    document.addEventListener("load", function () {
-        loadTransition();
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function() {
+            loadTransition();
+        }, 200);
     });
 
     window.addEventListener("unload", function () {
-        console.log("unload");
         removeTransition();
     });
 }
