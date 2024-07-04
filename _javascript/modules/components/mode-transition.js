@@ -14,11 +14,10 @@ export function initTransition() {
 
     window.addEventListener("message", function (event) {
         if (event.data.direction === ModeToggle.ID) {
-            if (!window.isPageLoaded) {
+            if (window.isPageLoaded) {
                 loadTransition();
                 window.isTransitionLoaded = true;
             }
-            console.log(event.data.direction);
         }
     });
 
