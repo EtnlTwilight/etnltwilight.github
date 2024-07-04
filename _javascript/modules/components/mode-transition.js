@@ -7,7 +7,7 @@ export function initTransition() {
     window.isPageLoaded = false;
     window.isTransitionLoaded = false;
 
-    document.addEventListener("onload", function () {
+    document.addEventListener("load", function () {
         loadTransition();
     });
 
