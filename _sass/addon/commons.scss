@@ -37,6 +37,10 @@ body {
   font-family: $font-family-base;
 }
 
+*{
+  transition: background-color .3s ease-in-out;
+}
+
 /* --- Typography --- */
 
 @for $i from 1 through 5 {
