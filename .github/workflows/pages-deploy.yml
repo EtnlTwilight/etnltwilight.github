@@ -49,6 +49,11 @@ jobs:
         run: |
           npm install 
           npm run build:js
+      
+      - name: Collect Files
+        run: |
+          cp ./_app/app.min.js ./assets/js/dist/
+          cp ./_app/sw.min.js ./assets/js/dist/
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"

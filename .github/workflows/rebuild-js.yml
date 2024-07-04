@@ -27,6 +27,11 @@ jobs:
           npm install 
           npm run build:js
         
+      - name: Collect Files
+        run: |
+          cp ./_app/app.min.js ./assets/js/dist/
+          cp ./_app/sw.min.js ./assets/js/dist/
+
       - name: Upload Files
         uses: actions/upload-artifact@v4
         with:
