@@ -40,6 +40,7 @@ body {
 *{
   transition: 
     background-color .3s ease-in-out,
+    border .3s ease-in-out,
     box-shadow .3s ease-in-out,
     color .3s ease-in-out;
 }
@@ -878,14 +879,6 @@ $btn-mb: 0.5rem;
 @media (hover: hover) {
   #sidebar ul > li:last-child::after {
     transition: top 0.5s ease;
-  }
-
-  .nav-link {
-    transition: background-color 0.3s ease-in-out;
-  }
-
-  .post-preview {
-    transition: background-color 0.35s ease-in-out;
   }
 }
 
