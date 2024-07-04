@@ -56,15 +56,15 @@ jobs:
             \-\-disable-external \
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
-      - name: Deploy to CloudFlare Pages
-        uses: cloudflare/wrangler-action@v3.1.0
-        with:
+     # - name: Deploy to CloudFlare Pages
+     #   uses: cloudflare/wrangler-action@v3.1.0
+     #   with:
           # Your Cloudflare API Token
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+     #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           # Your Cloudflare Account ID
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+     #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           # The Wrangler command (along with any arguments) you wish to run. Multiple Wrangler commands can be run by separating each command with a newline. Defaults to `"deploy"`.
-          command: pages deploy "_site${{ steps.pages.outputs.base_path }}" --project-name=eternaltwilight-github-io --commit-dirty=true
+     #     command: pages deploy "_site${{ steps.pages.outputs.base_path }}" --project-name=eternaltwilight-github-io --commit-dirty=true
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
