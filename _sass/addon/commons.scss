@@ -42,7 +42,8 @@ body {
     background-color .3s ease-in-out,
     border .3s ease-in-out,
     box-shadow .3s ease-in-out,
-    color .3s ease-in-out;
+    color .3s ease-in-out,
+    opacity .3s linear;
 }
 
 /* --- Typography --- */
@@ -79,7 +80,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
-  transition: all 0.35s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   .blur & {
     $blur: 20px;
