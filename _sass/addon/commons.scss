@@ -42,8 +42,7 @@ body {
     background-color .3s ease-in-out,
     border .3s ease-in-out,
     box-shadow .3s ease-in-out,
-    color .3s ease-in-out,
-    opacity .3s linear;
+    color .3s ease-in-out;
 }
 
 /* --- Typography --- */
@@ -365,7 +364,7 @@ sup {
     position: absolute;
     background-color: var(--card-hovor-bg);
     opacity: 0;
-    transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   }
 
   &:hover {
@@ -773,6 +772,11 @@ $btn-mb: 0.5rem;
       width: 100%;
       padding-left: 1.5rem;
       padding-right: 1.5rem;
+      transition: 
+        background-color .3s ease-in-out,
+        border .3s ease-in-out,
+        box-shadow .3s ease-in-out,
+        color .15s ease-in-out;
 
       a.nav-link {
         @include pt-pb(0.6rem);
