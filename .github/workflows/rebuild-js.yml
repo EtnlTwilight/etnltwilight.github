@@ -36,7 +36,7 @@ jobs:
   
           # A file, directory or wildcard pattern that describes what to upload
           # Required.
-          path: ./
+          path: ./assets/js/dist/
   
           # Duration after which artifact will expire in days. 0 means using default retention.
           # Minimum 1 day.
@@ -49,3 +49,6 @@ jobs:
           # Does not fail if the artifact does not exist.
           # Optional. Default is 'false'
           overwrite: true
+
+      - name: Output Artifact ID
+        run:  echo 'Artifact ID is ${{ steps.artifact-upload-step.outputs.artifact-id }}'
