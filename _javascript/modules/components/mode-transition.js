@@ -12,10 +12,6 @@ export function initTransition() {
             loadTransition();
         }, 800);
     });
-
-    window.addEventListener("unload", function () {
-        removeTransition();
-    });
 }
 
 function loadTransition() {
