@@ -71,7 +71,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   .blur & {
     $blur: 20px;
@@ -211,9 +211,14 @@ i {
     border-radius: 0.8rem;
     padding: 0.3rem 0.5rem;
     margin: 0 0.35rem 0.5rem 0;
+    transition: 
+      background-color 0.2s ease-in-out,
+      border 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out,
+      color 0.2s ease-in-out;
 
     &:hover {
-      transition: all 0.3s ease-out;
+      transition: all 0.2s ease-out;
     }
   }
 }
@@ -347,10 +352,10 @@ sup {
   background: var(--card-bg);
   box-shadow: var(--card-shadow);
   transition: 
-    background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out,
+    color 0.2s ease-in-out;
   will-change: auto;
 
   &:hover {
@@ -1152,10 +1157,10 @@ search {
   transition: 
     opacity 0.5s ease-in-out, 
     transform 0.2s ease-out,
-    background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 
   &:hover {
     transform: translate3d(0, -5px, 0);
@@ -1427,7 +1432,7 @@ search {
   }
 
   #search-input {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
   #search-results > article {

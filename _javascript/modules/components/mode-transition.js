@@ -4,7 +4,7 @@
  */
 
 export function initTransition() {
-    document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("load", function () {
         setTimeout(function() {
             loadTransition();
         }, 800);
@@ -19,10 +19,11 @@ function loadTransition() {
     var newStyle = document.createElement('style');
     var cssRules = `
             * {
-                transition: background-color 0.2s ease-in-out,
-                            border 0.2s ease-in-out,
-                            box-shadow 0.2s ease-in-out,
-                            color 0.2s ease-in-out;
+                transition: 
+                    background-color 0.2s ease-in-out,
+                    border 0.2s ease-in-out,
+                    box-shadow 0.2s ease-in-out,
+                    color 0.2s ease-in-out;
             }
         `;
     newStyle.id = "color-mode-transition";
