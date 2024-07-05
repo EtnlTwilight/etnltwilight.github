@@ -7,7 +7,6 @@ export function initTransition() {
     window.addEventListener("load", function () {
         window.setTimeout(function () {
             loadTransition();
-            document.body.willChange = "auto";
         }, 2000);
     });
 }

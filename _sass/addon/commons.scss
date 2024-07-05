@@ -35,7 +35,6 @@ body {
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   font-family: $font-family-base;
-  will-change: unset;
 }
 
 /* --- Typography --- */
@@ -357,6 +356,7 @@ sup {
     border-color 0.2s ease-in-out,
     box-shadow 0.2s ease-in-out,
     color 0.2s ease-in-out;
+  will-change: auto;
 
   &:hover {
     background-color: var(--card-hovor-bg);
@@ -717,8 +717,6 @@ $btn-mb: 0.5rem;
   }
 
   .profile-wrapper {
-    @extend %clickable-transition;
-
     width: 100%;
     margin-bottom: 12px;
     padding: 12px;
@@ -738,7 +736,6 @@ $btn-mb: 0.5rem;
     text-align: center;
 
     a {
-      @extend %clickable-transition;
       @extend %sidebar-link-hover;
 
       color: var(--site-title-color);
@@ -778,7 +775,7 @@ $btn-mb: 0.5rem;
         border-radius: 0.75rem;
         font-weight: 600;
         transition: 
-          background-color .3s ease-in-out,
+          background-color .2s ease-in-out,
           color .1s ease-in-out;
 
         &:hover {
@@ -802,7 +799,7 @@ $btn-mb: 0.5rem;
           color: var(--sidebar-active-color);
           background-color: var(--sidebar-nav-active-bg);
           transition: 
-            background-color .3s ease-in-out,
+            background-color .2s ease-in-out,
             color .1s ease-in-out;
 
           span {
@@ -852,7 +849,6 @@ $btn-mb: 0.5rem;
     a {
       @extend %button;
       @extend %sidebar-link-hover;
-      @extend %clickable-transition;
 
       &:not(:last-child) {
         margin-right: $sb-btn-gap;
