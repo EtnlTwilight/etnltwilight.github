@@ -9,6 +9,10 @@ export function initTransition() {
             loadTransition();
         }, 800);
     });
+
+    window.addEventListener("unload",function(){
+        removeTransition();
+    });
 }
 
 function loadTransition() {
@@ -26,4 +30,11 @@ function loadTransition() {
 
     // 将新样式添加到文档的head部分
     document.head.appendChild(newStyle);
+}
+
+function removeTransition() {
+    var style = document.getElementById("color-mode-transition")
+    if (!(style == null)) {
+        document.head.removeChild(style);
+    }
 }
