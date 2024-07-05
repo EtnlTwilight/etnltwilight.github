@@ -4,9 +4,6 @@
  */
 
 export function initTransition() {
-    document.addEventListener("DOMContentLoaded", function () {
-        document.body.willChange = "unset";
-    });
     window.addEventListener("load", function () {
         window.setTimeout(function () {
             loadTransition();

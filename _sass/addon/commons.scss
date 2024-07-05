@@ -35,6 +35,7 @@ body {
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   font-family: $font-family-base;
+  will-change: unset;
 }
 
 /* --- Typography --- */
