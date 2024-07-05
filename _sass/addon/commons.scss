@@ -213,7 +213,7 @@ i {
     margin: 0 0.35rem 0.5rem 0;
 
     &:hover {
-      transition: all 0.3s ease-in;
+      transition: all 0.3s ease-out;
     }
   }
 }
@@ -346,6 +346,12 @@ sup {
   border: 0;
   background: var(--card-bg);
   box-shadow: var(--card-shadow);
+  transition: 
+    background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+  will-change: auto;
 
   &::before {
     @extend %rounded;
@@ -356,12 +362,12 @@ sup {
     position: absolute;
     background-color: var(--card-hovor-bg);
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
   }
 
   &:hover {
     &::before {
-      opacity: 0.3;
+      opacity: 1;
     }
   }
 }
@@ -1157,7 +1163,13 @@ search {
   height: $back2top-size;
   border-radius: 50%;
   border: 1px solid var(--btn-backtotop-border-color);
-  transition: opacity 0.5s ease-in-out, transform 0.2s ease-out;
+  transition: 
+    opacity 0.5s ease-in-out, 
+    transform 0.2s ease-out,
+    background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 
   &:hover {
     transform: translate3d(0, -5px, 0);

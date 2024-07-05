@@ -16,7 +16,7 @@ function loadTransition() {
     var cssRules = `
             * {
                 transition: background-color 0.3s ease-in-out,
-                            border 0.3s ease-in-out,
+                            border-color 0.3s ease-in-out,
                             box-shadow 0.3s ease-in-out,
                             color 0.3s ease-in-out;
             }
