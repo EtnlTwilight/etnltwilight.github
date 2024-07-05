@@ -5,10 +5,12 @@
 
 export function initTransition() {
     document.addEventListener("DOMContentLoaded", function () {
+        console.log("remove");
         removeTransition();
     });
 
     window.addEventListener("load", function () {
+        console.log("load");
         loadTransition();
     });
 }
