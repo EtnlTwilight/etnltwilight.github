@@ -11,8 +11,6 @@ tags: [blog,test]
 
 1. 首先需要你使用命令行进入我们自己仓库的根目录，如下图例如笔者这里
 
-    ![截图](/assets/image/2024/2/20240220003809.png)
-
 2. 添加原始仓库为你的 fork 的一个远程源（如果你还没有这么做的话）。这样做可以让你能够获取原始仓库的更新。打开终端或 Git Bash，然后运行如下命令：
 
     ```
@@ -31,8 +29,6 @@ tags: [blog,test]
     git fetch upstream
     ```
 
-    ![截图](/assets/image/2024/2/20240220004302.png)
-
 4. 切换到你的本地主分支。在合并更新之前，确保你在你的 fork 的主分支上（通常是 main 或 master）：
 
     ```
@@ -47,11 +43,8 @@ tags: [blog,test]
 
     笔者这里是 master，所以执行 git checkout master
 
-    ![截图](/assets/image/2024/2/20240220004511.png)
 
     如何知道自己仓库是 main 还是 master，在 GitHub 的仓库首页即可看到
-
-    ![截图](/assets/image/2024/2/20240220004641.png)
 
 5. 将更新合并到你的主分支。现在，你可以将 upstream 的更新合并到你的本地主分支：
 
@@ -66,8 +59,6 @@ tags: [blog,test]
     ```
 
     执行完命令之后，如果出现如下图所示的 Automatic merge failed; fix conflicts and then commit the result. 就需要暂停下步骤，请转到下一 part 冲突处理
-
-    ![截图](/assets/image/2024/2/20240220004928.png)
 
     如果没有出现，则可以继续最后一步
 
@@ -97,8 +88,6 @@ tags: [blog,test]
 
     笔者这里执行之后，出现了一堆的红色冲突（Unmerged paths），绿色是 git 帮你自动 merge 好的或者自动处理了冲突的，相当于已经执行了 git add 命令，可以不用管
 
-    ![截图](/assets/image/2024/2/20240220005806.png)
-
     当然红色冲突部分也分为多种，比如笔者这里出现了两种，一种是 【deleted by us】 的，也就是笔者删除了文件同时主题作者又修改了这一文件，另一种是 【both modified】 ，也就是笔者和作者同时修改了这个文件的某一部分
 
 2. 处理【deleted by us】冲突
@@ -115,8 +104,6 @@ tags: [blog,test]
     ```
 
     分别执行之后，就会发现这些文件已经从工作目录删除，同时这里执行 git status 命令也会发现，【Unmerged paths】部分也不会再显示这些文件冲突
-
-    ![截图](/assets/image/2024/2/20240220010721.png)
 
     假如笔者这里希望保留【\_posts/2019-08-09-getting-started.md】文件，那就需要检出这个文件：
 
@@ -137,7 +124,6 @@ tags: [blog,test]
     通常非常容易出现这类冲突，这里我们以笔者这里出现的.gitignore 文件冲突举例说明如何处理这类冲突
 
     使用编辑器（笔者这里使用 vscode）打开后，会非常醒目的标记出冲突，如图
-    ![截图](/assets/image/2024/2/20240220000252.png)
 
     这里需要手动编辑这个文件，决定保留哪个版本的更改，或者合并这些更改。冲突部分会被包围在<<<<<<< HEAD 和>>>>>>> upstream/master 之间，类似这样：
 
@@ -150,8 +136,6 @@ tags: [blog,test]
     ```
 
     笔者这里希望保留主题作者的更改，于是首先删除了【你在 HEAD（你的分支）版本的内容】，然后删除<<<<<<< HEAD、=======、>>>>>>> upstream/master 这些标记并保存。修改完如图：
-
-    ![截图](/assets/image/2024/2/20240220012217.png)
 
     最后再使用 git add 命令提交这个文件
 
@@ -174,8 +158,6 @@ tags: [blog,test]
 # 最后
 
 提交到远程仓库之后，正常情况下会打包成功并且会显示你的代码仓库领先主题作者仓库多少分支，如图笔者这里提交后的显示：
-
-![截图](/assets/image/2024/2/20240220012526.png)
 
 这里【This branch is 100 commits ahead of cotes2020/jekyll-theme-chirpy:master.】这句话表示笔者当前的分支比 cotes2020/jekyll-theme-chirpy 仓库的 master 分支领先了 100 个提交。在 Git 中，这意味着笔者最后一次从 cotes2020/jekyll-theme-chirpy 的 master 分支拉取（或克隆或者以它为基础创建分支）以来，笔者已经在笔者的分支上进行了 100 次提交的更改，而这些更改还没有被推送到 cotes2020/jekyll-theme-chirpy 的 master 分支上
 
