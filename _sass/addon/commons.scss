@@ -201,7 +201,6 @@ i {
   .panel-heading {
     font-family: inherit;
     line-height: inherit;
-    transition: color .05s ease-in-out;
 
     @include label(inherit);
   }
@@ -724,6 +723,7 @@ $btn-mb: 0.5rem;
     @extend %clickable-transition;
 
     width: 100%;
+    margin-bottom: 12px;
     padding: 12px;
     background: var(--sidebar-bg);
     border-radius: 8px;
@@ -738,6 +738,7 @@ $btn-mb: 0.5rem;
     letter-spacing: 0.25px;
     margin-top: 1.25rem;
     margin-bottom: 0.5rem;
+    text-align: center;
 
     a {
       @extend %clickable-transition;
@@ -756,9 +757,11 @@ $btn-mb: 0.5rem;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    text-align: center;
   }
 
   ul {
+    margin-top: 12px;
     padding: 12px;
     background: var(--sidebar-bg);
     border-radius: 8px;
