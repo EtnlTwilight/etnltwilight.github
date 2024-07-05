@@ -353,22 +353,8 @@ sup {
     color 0.3s ease-in-out;
   will-change: auto;
 
-  &::before {
-    @extend %rounded;
-
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: var(--card-hovor-bg);
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-  }
-
   &:hover {
-    &::before {
-      opacity: 0.3;
-    }
+    background-color: var(--card-hovor-bg);
   }
 }
 
