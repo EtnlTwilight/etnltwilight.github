@@ -4,9 +4,6 @@
  */
 
 export function initTransition() {
-    window.isPageLoaded = false;
-    window.isTransitionLoaded = false;
-
     document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function() {
             loadTransition();
@@ -29,11 +26,4 @@ function loadTransition() {
 
     // 将新样式添加到文档的head部分
     document.head.appendChild(newStyle);
-}
-
-function removeTransition() {
-    var style = document.getElementById("color-mode-transition")
-    if (!(style == null)) {
-        document.head.removeChild(style);
-    }
 }

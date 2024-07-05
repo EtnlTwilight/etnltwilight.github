@@ -772,9 +772,6 @@ $btn-mb: 0.5rem;
         align-items: center;
         border-radius: 0.75rem;
         font-weight: 600;
-        transition: 
-          background-color .3s ease-in-out,
-          color .1s ease-in-out;
 
         &:hover {
           background-color: var(--sidebar-hover-bg);
@@ -796,9 +793,6 @@ $btn-mb: 0.5rem;
         .nav-link {
           color: var(--sidebar-active-color);
           background-color: var(--sidebar-nav-active-bg);
-          transition: 
-            background-color .3s ease-in-out,
-            color .1s ease-in-out;
 
           span {
             opacity: 1;

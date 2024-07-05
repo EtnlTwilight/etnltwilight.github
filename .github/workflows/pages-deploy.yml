@@ -54,6 +54,7 @@ jobs:
         run: |
           cp ./_app/app.min.js ./assets/js/dist/
           cp ./_app/sw.min.js ./assets/js/dist/
+          cp ./_app/sw.min.js ./
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
