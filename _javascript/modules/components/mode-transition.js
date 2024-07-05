@@ -5,11 +5,12 @@
 
 export function initTransition() {
     window.addEventListener("load", function () {
-        window.setTimeout(loadTransition, 2000);
+        //window.setTimeout(loadTransition, 2000);
+        loadTransition();
     });
 
     window.addEventListener("unload", function () {
-        removeTransition();
+        //removeTransition();
     });
 }
 
