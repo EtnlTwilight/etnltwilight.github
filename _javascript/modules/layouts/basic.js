@@ -4,6 +4,6 @@ import { loadTooptip } from '../components/tooltip-loader';
 
 export function basic() {
   back2top();
-  initTransition();
+  
   loadTooptip();
 }
