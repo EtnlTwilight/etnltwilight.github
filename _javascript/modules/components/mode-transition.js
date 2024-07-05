@@ -9,9 +9,7 @@ export function initTransition() {
     });
 
     window.addEventListener("load", function () {
-        setTimeout(function () {
-            loadTransition();
-        }, 1000);
+        loadTransition();
     });
 }
 
