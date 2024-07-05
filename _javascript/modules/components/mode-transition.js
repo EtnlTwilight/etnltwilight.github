@@ -1,18 +1,16 @@
-/**
+/*
  * Load transition after page loaded,
  * to avoid a strange visual when switching page.
  */
 
 export function initTransition() {
-    window.addEventListener("load", function () {
+   /* window.addEventListener("load", function () {
         setTimeout(function() {
             loadTransition();
-        }, 800);
+        }, 2000);
     });
-
-    window.addEventListener("unload",function(){
-        removeTransition();
-    });
+    */
+    loadTransition();
 }
 
 function loadTransition() {
@@ -28,14 +26,5 @@ function loadTransition() {
         `;
     newStyle.id = "color-mode-transition";
     newStyle.appendChild(document.createTextNode(cssRules));
-
-    // 将新样式添加到文档的head部分
     document.head.appendChild(newStyle);
-}
-
-function removeTransition() {
-    var style = document.getElementById("color-mode-transition")
-    if (!(style == null)) {
-        document.head.removeChild(style);
-    }
 }
