@@ -5,7 +5,7 @@
 
 export function initTransition() {
     window.addEventListener("load", function () {
-        loadTransition();
+        window.setTimeout(loadTransition, 800);
     });
 
     window.addEventListener("unload", function () {
