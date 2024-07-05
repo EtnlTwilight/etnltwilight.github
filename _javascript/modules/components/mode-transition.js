@@ -9,6 +9,10 @@ export function initTransition() {
             loadTransition();
         }, 2000);
     });
+
+    window.addEventListener("unload", function () {
+        removeTransition();
+    });
 }
 
 function loadTransition() {
@@ -25,4 +29,11 @@ function loadTransition() {
     newStyle.id = "color-mode-transition";
     newStyle.appendChild(document.createTextNode(cssRules));
     document.head.appendChild(newStyle);
+}
+
+function removeTransition() {
+    var style = document.getElementById("color-mode-transition")
+    if (!(style == null)) {
+        document.head.removeChild(style);
+    }
 }
