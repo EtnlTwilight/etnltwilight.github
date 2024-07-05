@@ -1,14 +1,9 @@
-import { pwa } from '../../_config.yml';
-
 /*
  * Load transition after page loaded,
  * to avoid a strange visual when switching page.
  */
 
 export function initTransition() {
-    if(!pwa.enabled){
-        return;
-    }
     removeTransition();
 
     window.addEventListener("load", function () {
