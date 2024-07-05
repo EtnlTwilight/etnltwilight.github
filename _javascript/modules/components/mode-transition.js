@@ -4,8 +4,6 @@
  */
 
 export function initTransition() {
-    removeTransition();
-
     window.addEventListener("load", function () {
         window.setTimeout(function () {
             loadTransition();
