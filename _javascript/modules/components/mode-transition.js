@@ -4,12 +4,14 @@
  */
 
 export function initTransition() {
-    window.addEventListener("load", function () {
-        window.setTimeout(loadTransition, 2000);
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.willChange = "unset";
     });
-
-    window.addEventListener("unload", function () {
-        //removeTransition();
+    window.addEventListener("load", function () {
+        window.setTimeout(function () {
+            loadTransition();
+            document.body.willChange = "auto";
+        }, 2000);
     });
 }
 
@@ -27,11 +29,4 @@ function loadTransition() {
     newStyle.id = "color-mode-transition";
     newStyle.appendChild(document.createTextNode(cssRules));
     document.head.appendChild(newStyle);
-}
-
-function removeTransition() {
-    var style = document.getElementById("color-mode-transition")
-    if (!(style == null)) {
-        document.head.removeChild(style);
-    }
 }
