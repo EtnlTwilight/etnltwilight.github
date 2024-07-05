@@ -4,13 +4,11 @@
  */
 
 export function initTransition() {
-   /* window.addEventListener("load", function () {
-        setTimeout(function() {
+    window.addEventListener("load", function () {
+        setTimeout(function () {
             loadTransition();
-        }, 2000);
+        }, 1000);
     });
-    */
-    loadTransition();
 }
 
 function loadTransition() {
