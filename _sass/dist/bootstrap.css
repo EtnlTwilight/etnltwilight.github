@@ -79,7 +79,6 @@ time,
 p,
 span {
     transition: color .05s ease-in-out;
-    will-change: color;
 }
 
 .h1,
@@ -100,7 +99,6 @@ h6 {
     line-height: 1.2;
     color: var(--bs-heading-color);
     transition: color .05s ease-in-out;
-    will-change: color;
 }
 
 .h1,
