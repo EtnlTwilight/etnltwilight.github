@@ -4,11 +4,9 @@
  */
 
 export function initTransition() {
-    jQuery.fx.off = true;
     window.addEventListener("load", function () {
         loadTransition();
         window.setTimeout(function () {
-            jQuery.fx.off = false;
         }, 800);
     });
 }
