@@ -7,7 +7,7 @@ export function initTransition() {
     window.addEventListener("load", function () {
         window.setTimeout(function () {
             loadTransition();
-        }, 200);
+        }, 400);
     });
 }
 
