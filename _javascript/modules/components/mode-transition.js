@@ -4,9 +4,11 @@
  */
 
 export function initTransition() {
+    jQuery.fx.off = true;
     window.addEventListener("load", function () {
         window.setTimeout(function () {
             loadTransition();
+            jQuery.fx.off = false;
         }, 400);
     });
 }
@@ -30,6 +32,7 @@ function loadTransition() {
             time,
             p,
             span {
+                color: var(--text-color);
                 transition: color .05s ease-in-out;
                 will-change: color;
             }
@@ -46,6 +49,7 @@ function loadTransition() {
             h4,
             h5,
             h6 {
+                color: var(--text-color);
                 transition: color .05s ease-in-out;
                 will-change: color;
             }
