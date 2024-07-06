@@ -8,7 +8,7 @@ export function initTransition() {
     window.addEventListener("load", function () {
         window.setTimeout(function () {
             JQuery.fx.off = false;
-        }, 400);
+        }, 600);
     });
 }
 
