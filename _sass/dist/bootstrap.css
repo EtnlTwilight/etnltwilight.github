@@ -70,18 +70,6 @@ hr {
     opacity: .25
 }
 
-.a,
-.time,
-.p,
-.span,
-a,
-time,
-p,
-span {
-    transition: color .05s ease-in-out;
-    will-change: color;
-}
-
 .h1,
 .h2,
 .h3,
@@ -99,8 +87,6 @@ h6 {
     font-weight: 500;
     line-height: 1.2;
     color: var(--bs-heading-color);
-    transition: color .05s ease-in-out;
-    will-change: color;
 }
 
 .h1,
