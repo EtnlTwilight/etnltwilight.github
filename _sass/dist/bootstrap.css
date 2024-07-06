@@ -217,6 +217,7 @@ a:not([href]):not([class]):hover {
 code,
 kbd,
 pre {
+    color: var(--text-color);
     font-family: var(--bs-font-monospace);
     font-size: 1em
 }
