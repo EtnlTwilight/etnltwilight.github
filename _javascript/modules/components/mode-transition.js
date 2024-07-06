@@ -6,10 +6,10 @@
 export function initTransition() {
     jQuery.fx.off = true;
     window.addEventListener("load", function () {
+        loadTransition();
         window.setTimeout(function () {
-            loadTransition();
             jQuery.fx.off = false;
-        }, 400);
+        }, 800);
     });
 }
 
