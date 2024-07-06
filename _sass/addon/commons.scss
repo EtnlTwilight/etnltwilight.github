@@ -45,36 +45,6 @@ body {
       color 0.2s ease-in-out;
 }
       
-.a,
-.time,
-.p,
-.span,
-a,
-time,
-p,
-span {
-  color: var(--text-color);
-  transition: color .05s ease-in-out;
-  will-change: color;
-}
-
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--text-color);
-  transition: color .05s ease-in-out;
-  will-change: color;
-}
-
 /* --- Typography --- */
 
 @for $i from 1 through 5 {
@@ -204,6 +174,9 @@ i {
   &.far,
   &.fas {
     @extend %no-cursor;
+
+    transition: color .05s ease-in-out;
+    will-change: color;
   }
 }
 
@@ -390,8 +363,8 @@ sup {
   background: var(--card-bg);
   box-shadow: var(--card-shadow);
   transition: 
-    background-color 0.2s ease-in-out,
-    border-color 0.2s ease-in-out,
+    background-color 0.2s ease-out,
+    border-color 0.2s ease-out,
     box-shadow 0.2s ease-in-out,
     color 0.2s ease-in-out;
   will-change: auto;

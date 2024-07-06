@@ -219,7 +219,12 @@ kbd,
 pre {
     color: var(--text-color);
     font-family: var(--bs-font-monospace);
-    font-size: 1em
+    font-size: 1em;
+    transition:                     
+        background-color 0.2s ease-in-out,
+        border 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out,
+        color 0.05s ease-in-out;
 }
 
 pre {
